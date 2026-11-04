@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DollarsPlay App</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+  body{background:#0f0c29;background:linear-gradient(to right,#24243e,#302b63,#0f0c29);color:white;min-height:100vh}
+  .header{padding:20px;text-align:center}
+  .header h1{font-size:28px;letter-spacing:1px}
+  .header p{opacity:0.7;margin-top:5px}
+  .balance-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);margin:15px;border-radius:20px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,0.2)}
+  .balance-card h2{font-size:14px;opacity:0.7}
+  .balance-card h1{font-size:36px;margin:10px 0;color:#00ff9d}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:15px}
+  .card{background:white;color:#302b63;border-radius:15px;padding:20px;text-align:center;font-weight:bold;box-shadow:0 10px 20px rgba(0,0,0,0.3)}
+  .card span{font-size:30px;display:block;margin-bottom:10px}
+  .card:active{transform:scale(0.95)}
+  .btn{margin:20px;background:#00ff9d;color:#0f0c29;padding:15px;border-radius:30px;text-align:center;font-weight:bold;display:block;text-decoration:none}
+  .footer{text-align:center;opacity:0.5;font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>💰 DOLLARSPLAY</h1>
+    <p>Offline Earning App</p>
+  </div>
+  <div class="balance-card">
+    <h2>TOTAL BALANCE</h2>
+    <h1>$<span id="bal">12.50</span></h1>
+    <p>Offline Mode • No Internet Needed</p>
+  </div>
+  <div class="grid">
+    <div class="card" onclick="addCoin(0.5)"><span>▶️</span>Watch Ad</div>
+    <div class="card" onclick="addCoin(1)"><span>🎡</span>Spin Wheel</div>
+    <div class="card" onclick="addCoin(0.25)"><span>✅</span>Daily Check</div>
+    <div class="card" onclick="addCoin(2)"><span>🎁</span>Bonus</div>
+  </div>
+  <a class="btn" onclick="addCoin(0.1)">TAP TO EARN + $0.10</a>
+  <div class="footer">App Theme v2.0 - Offline Working</div>
+
+<script>
+  let b = localStorage.getItem('bal') || 12.5;
+  document.getElementById('bal').innerText = b;
+  function addCoin(v){
+    b = parseFloat(b) + v;
+    localStorage.setItem('bal', b.toFixed(2));
+    document.getElementById('bal').innerText = b.toFixed(2);
+    navigator.vibrate && navigator.vibrate(50);
+  }
+</script>
+</body>
+</html>
