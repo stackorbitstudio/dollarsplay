@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12122A">
+
+    <!-- SPLASH PAGE -->
+    <LinearLayout android:id="@+id/splashPage"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center" android:orientation="vertical" android:background="#12122A">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="💰" android:textSize="80sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="DOLLARSPLAY" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginTop="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Earn Real Money" android:textColor="#00FF99" android:textSize="16sp" android:layout_marginTop="8dp"/>
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp"/>
+    </LinearLayout>
+
+    <!-- LOGIN PAGE -->
+    <ScrollView android:id="@+id/loginPage" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Welcome Back" android:textSize="26sp" android:textStyle="bold" android:textColor="#FFF" android:layout_marginTop="60dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login to continue earning" android:textColor="#AAA" android:layout_marginTop="8dp" android:layout_marginBottom="32dp"/>
+            
+            <EditText android:id="@+id/nameInput" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Full Name" android:background="@android:drawable/editbox_background" android:padding="12dp" android:layout_marginBottom="12dp"/>
+            <EditText android:id="@+id/emailInput" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Email Address" android:inputType="textEmailAddress" android:background="@android:drawable/editbox_background" android:padding="12dp" android:layout_marginBottom="12dp"/>
+            <EditText android:id="@+id/passInput" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Password (6+ chars)" android:inputType="textPassword" android:background="@android:drawable/editbox_background" android:padding="12dp" android:layout_marginBottom="20dp"/>
+            
+            <Button android:id="@+id/loginBtn" android:layout_width="match_parent" android:layout_height="55dp" android:text="LOGIN / SIGN UP" android:backgroundTint="#00FF99" android:textColor="#000" android:textStyle="bold"/>
+            <Button android:id="@+id/googleBtn" android:layout_width="match_parent" android:layout_height="55dp" android:text="Continue with Google" android:backgroundTint="#FFFFFF" android:textColor="#000" android:layout_marginTop="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- HOME PAGE -->
+    <LinearLayout android:id="@+id/homePage" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone" android:padding="16dp">
+        <TextView android:id="@+id/welcomeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hi, User" android:textColor="#FFF" android:textSize="18sp" android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="140dp" android:orientation="vertical" android:background="#2A2A4A" android:gravity="center" android:layout_marginTop="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL BALANCE" android:textColor="#AAA" android:textSize="14sp"/>
+            <TextView android:id="@+id/balanceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0.00" android:textColor="#00FF99" android:textSize="36sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Min Withdraw $10" android:textColor="#FFF" android:textSize="12sp" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        
+        <Button android:id="@+id/tapEarnBtn" android:layout_width="match_parent" android:layout_height="60dp" android:text="TAP TO EARN + $0.10" android:backgroundTint="#00FF99" android:textColor="#000" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="16dp">
+            <Button android:id="@+id/btnToTasks" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:text="📋 Tasks" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnToSpin" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:text="🎡 Spin" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnToCheckin" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:text="✅ Daily Check" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnToWithdraw" android:layout_width="0dp" android:layout_height="100dp" android:layout_weight="1" android:text="💸 Withdraw" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- SPIN PAGE -->
+    <LinearLayout android:id="@+id/spinPage" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone" android:gravity="center" android:padding="24dp">
+        <Button android:id="@+id/backFromSpin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back" android:layout_gravity="start"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎡" android:textSize="80sp" android:layout_marginTop="40dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Spin Wheel" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/spinResult" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spin to win up to $1.00" android:textColor="#00FF99" android:textSize="18sp" android:layout_marginTop="24dp"/>
+        <Button android:id="@+id/spinBtn" android:layout_width="match_parent" android:layout_height="60dp" android:text="SPIN NOW" android:backgroundTint="#00FF99" android:textColor="#000" android:textStyle="bold" android:layout_marginTop="32dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Only 1 spin per day" android:textColor="#AAA" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <!-- CHECK-IN PAGE -->
+    <LinearLayout android:id="@+id/checkinPage" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone" android:gravity="center" android:padding="24dp">
+        <Button android:id="@+id/backFromCheckin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back" android:layout_gravity="start"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✅" android:textSize="80sp" android:layout_marginTop="40dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Check-In" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="16dp"/>
+        <TextView android:id="@+id/streakText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Streak: 0 Days" android:textColor="#00FF99" android:textSize="18sp" android:layout_marginTop="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 1=$0.10, Day 2=$0.20... up to $1.00" android:textColor="#AAA" android:textSize="12sp" android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/checkinBtn" android:layout_width="match_parent" android:layout_height="60dp" android:text="CHECK-IN TODAY" android:backgroundTint="#00FF99" android:textColor="#000" android:textStyle="bold" android:layout_marginTop="32dp"/>
+    </LinearLayout>
+
+    <!-- WITHDRAW PAGE -->
+    <ScrollView android:id="@+id/withdrawPage" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <Button android:id="@+id/backFromWithdraw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Withdraw Money" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Minimum $10 required" android:textColor="#00FF99" android:layout_marginBottom="24dp"/>
+            
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Withdrawal Method" android:textColor="#FFF"/>
+            <Spinner android:id="@+id/methodSpinner" android:layout_width="match_parent" android:layout_height="55dp" android:background="#FFF" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
+            
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account Number / IBAN" android:textColor="#FFF"/>
+            <EditText android:id="@+id/accountInput" android:layout_width="match_parent" android:layout_height="55dp" android:hint="03XXXXXXXXX or IBAN" android:background="@android:drawable/editbox_background" android:padding="12dp" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
+            
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount ($)" android:textColor="#FFF"/>
+            <EditText android:id="@+id/amountInput" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Min $10" android:inputType="numberDecimal" android:background="@android:drawable/editbox_background" android:padding="12dp" android:layout_marginTop="8dp" android:layout_marginBottom="24dp"/>
+            
+            <Button android:id="@+id/withdrawBtn" android:layout_width="match_parent" android:layout_height="60dp" android:text="REQUEST WITHDRAWAL" android:backgroundTint="#00FF99" android:textColor="#000" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Supported: Easypaisa, JazzCash, Bank Transfer, Payoneer. Processing 24-48 hours." android:textColor="#AAA" android:textSize="11sp" android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- TASKS PAGE -->
+    <LinearLayout android:id="@+id/tasksPage" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone" android:padding="24dp">
+        <Button android:id="@+id/backFromTasks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back" android:layout_gravity="start"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Earn More Tasks" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="16dp" android:layout_marginBottom="24dp"/>
+        
+        <LinearLayout android:layout_width="match_parent" android:layout_height="80dp" android:background="#2A2A4A" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎬 Watch Daily Content&#10;+$0.15" android:textColor="#FFF"/>
+            <Button android:id="@+id/taskVideoBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="80dp" android:background="#2A2A4A" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🎮 Play Mini Game&#10;+$0.20" android:textColor="#FFF"/>
+            <Button android:id="@+id/taskGameBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="80dp" android:background="#2A2A4A" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="👥 Invite Friends&#10;+$1.00 per friend" android:textColor="#FFF"/>
+            <Button android:id="@+id/taskInviteBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invite"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
