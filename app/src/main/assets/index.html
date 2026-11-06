@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DollarsPlay</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#111;color:#fff;padding:16px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.logo{font-size:24px;font-weight:900;color:#FFC107}
+.logo span{color:#fff}
+.wallet{background:#FFC107;color:#000;padding:14px 18px;border-radius:14px;font-weight:800}
+.balance{font-size:22px}
+.banner{background:linear-gradient(135deg,#FFC107,#FF6D00);color:#000;padding:20px;border-radius:16px;margin-bottom:18px}
+.banner h2{font-size:22px;margin-bottom:6px}
+.banner p{font-size:14px;opacity:.8}
+.banner button{background:#000;color:#FFC107;border:0;padding:10px 18px;border-radius:20px;font-weight:800;margin-top:12px}
+h3{margin:14px 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#1E1E1E;border:1px solid #333;border-radius:16px;padding:16px;text-align:center}
+.card .icon{font-size:36px;margin-bottom:8px}
+.card b{display:block;margin-bottom:4px}
+.card small{color:#aaa}
+.card button{background:#FFC107;border:0;padding:8px 14px;border-radius:20px;font-weight:800;margin-top:10px;width:100%}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#1A1A1A;display:flex;justify-content:space-around;padding:14px;border-top:1px solid #333}
+.nav span{font-size:12px;text-align:center;color:#aaa}
+.nav .active{color:#FFC107}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo">Dollars<span>Play</span></div>
+<div class="wallet">💰 <span class="balance">$ 0.00</span><br><small style="font-weight:400">Wallet Balance</small></div>
+</div>
+
+<div class="banner">
+<h2>🎮 Play & Earn Daily!</h2>
+<p>Games khelo, Tasks complete karo, Dollars jeeto.</p>
+<button onclick="alert('Daily Bonus Claimed! + $0.10')">Claim Daily Bonus</button>
+</div>
+
+<h3>🔥 Popular Games</h3>
+<div class="grid">
+<div class="card"><div class="icon">🎯</div><b>Lucky Spin</b><small>Win upto $5</small><button onclick="alert('Lucky Spin Coming Soon!')">PLAY</button></div>
+<div class="card"><div class="icon">🧩</div><b>Puzzle Master</b><small>Win upto $2</small><button onclick="alert('Puzzle Coming Soon!')">PLAY</button></div>
+<div class="card"><div class="icon">🏏</div><b>Cricket Quiz</b><small>Win upto $3</small><button onclick="alert('Quiz Coming Soon!')">PLAY</button></div>
+<div class="card"><div class="icon">🎲</div><b>Ludo King</b><small>Win upto $10</small><button onclick="alert('Ludo Coming Soon!')">PLAY</button></div>
+</div>
+
+<h3>💰 Earn More</h3>
+<div class="grid">
+<div class="card"><div class="icon">📺</div><b>Watch Ads</b><small>$0.01 / Ad</small><button>START</button></div>
+<div class="card"><div class="icon">👥</div><b>Refer Friend</b><small>$0.50 / Friend</small><button>INVITE</button></div>
+</div>
+<br><br><br>
+<div class="nav"><span class="active">🏠<br>Home</span><span>🎮<br>Games</span><span>💰<br>Wallet</span><span>👤<br>Profile</span></div>
+</body>
+</html>
